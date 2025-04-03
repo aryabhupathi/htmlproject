@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.nav-links-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Right section (Search & Button) */
+.abc {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: right;
+    gap: 10px;
+}
+
+/* Search Wrapper */
+.search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 30px;
+    width: 40px;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+/* Initially Hide Input */
+.search-container input {
+    width: 0;
+    opacity: 0;
+    border: none;
+    outline: none;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* Search Icon */
+.search-container i {
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Expanded Search takes up links' space */
+.search-wrapper.centered {
+    flex: 2;
+    justify-content: center;
+}
+
+.search-wrapper.centered .search-container {
+    width: 100%;
+    max-width: 600px;
+    background: #ddd;
+    justify-content: space-between;
+}
+
+/* Expanded Input */
+.search-wrapper.centered .search-container input {
+    width: 100%;
+    opacity: 1;
+    padding: 8px 15px;
+}
+
+/* Hide links when search is active */
+.navbar.search-active .nav-links-container {
+    display: none;
+}
+
+/* Button */
+.button {
+    background-color: #caa748;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.button:hover {
+    background-color: #b8973a;
+}

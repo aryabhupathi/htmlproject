@@ -4,9 +4,9 @@ body {
   margin: 0;
   padding: 0;
 }
-.section1{
+.section1 {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
 }
 /* Ingredients Section */
 .ingredients-section {
@@ -60,20 +60,6 @@ body {
 }
 .guarantee-item {
   font-size: 16px;
-}
-
-.brands {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 10px; /* Adds space between items */
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.as-seen-in {
-  margin-right: 10px;
-  font-weight: bold;
 }
 
 .owntry {
@@ -357,10 +343,10 @@ td {
   margin-bottom: 10px;
 }
 
-img {
+/* img {
   max-width: 40px;
   margin-bottom: 5px;
-}
+} */
 
 .checkmark {
   color: green;
@@ -781,4 +767,3 @@ img {
     justify-content: center;
   }
 }
-

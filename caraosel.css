@@ -1,0 +1,124 @@
+/* Carousel styling */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background-color: #ece9e9;
+}
+
+.main-image-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#mainImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.prev, .next {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 14px;
+    color: #555;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation dots */
+.dots-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumb.active {
+    border-color: #4a90e2;
+}
+
+/* Cart section styling */
+.cartfull {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carousel-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cart-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .cartfull {
+        flex-direction: column;
+    }
+}

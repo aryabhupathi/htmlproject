@@ -1,0 +1,266 @@
+/* Common styles for selection components */
+.selection-container label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+  }
+  
+  .selection-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /* Flavor options styling */
+  .flavor-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .flavor-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    padding: 15px 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid transparent;
+  }
+  
+  .flavor-name {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .flavor-box img {
+    width: 80%;
+    height: auto;
+    max-height: 130px;
+    object-fit: contain;
+  }
+  
+  .best-seller {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #b38b5d;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* Subscription options styling */
+  .subscriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 650px;
+    margin: 20px 0;
+  }
+  
+  .sub-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    padding-left: 50px; /* Add padding to create space for the radio button */
+    position: relative; /* Ensure relative positioning for absolute elements */
+  }
+  
+  .sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .sub-box b {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .price {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .price s {
+    color: #999;
+    margin-left: 8px;
+    font-weight: 400;
+  }
+  
+  .sub-details {
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .sub-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sub-details li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  /* What's included section */
+  .whats-included {
+    margin: 25px 0 15px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .inclusion-boxes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .inclusion-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .inclusion-box h4 {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 15px;
+    font-weight: normal;
+  }
+  
+  .inclusion-box h4 span {
+    color: #b38b5d;
+  }
+  
+  /* Common selection styles */
+  .selection-container input[type="radio"]:checked + .flavor-box {
+    border: 2px solid #b38b5d;
+    background-color: #fff;
+  }
+  
+  .selection-container input[type="radio"]:checked + .sub-box {
+    border: 2px solid #b38b5d;
+  }
+  
+  /* Most popular tag styling */
+  .most-popular .sub-box::before {
+    content: "Most Popular";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: #b38b5d;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 2;
+  }
+  
+  .most-popular .sub-header {
+    padding-top: 35px;
+  }
+  
+  /* Selected item indicators */
+  .selection-container input[type="radio"]:checked + .flavor-box .flavor-name {
+    color: #b38b5d;
+    font-weight: 700;
+  }
+  
+  .selection-container input[type="radio"]:checked + .sub-box .sub-header {
+    background-color: rgba(179, 139, 93, 0.1);
+  }
+  
+  .selection-container input[type="radio"]:checked + .sub-box .sub-details {
+    display: block;
+  }
+  
+  /* Radio button styling for subscription boxes */
+  .subscriptions .sub-box::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50%; /* Center vertically relative to the header */
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: white;
+  }
+  
+  .subscriptions input[type="radio"]:checked + .sub-box::after {
+    border: 2px solid #b38b5d;
+  }
+  
+  .subscriptions input[type="radio"]:checked + .sub-box::before {
+    content: '';
+    position: absolute;
+    left: 26px;
+    top: 50%; /* Center vertically relative to the header */
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #b38b5d;
+    z-index: 1;
+  }
+  
+  /* Fix for the "Most Popular" label to not conflict with radio indicator */
+  .most-popular .sub-box::before {
+    content: "Most Popular";
+    transform: none;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  
+  /* Circle indicator for selected flavor options */
+  .flavor-options input[type="radio"]:checked + .flavor-box::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #b38b5d;
+    border: 2px solid white;
+    z-index: 1;
+  }
+  
+  /* Utility class */
+  .hidden {
+    display: none;
+  }
+
+  .free-container{
+    display: flex;
+    justify-content: left;
+  }
+  .free-image{
+    
+    width:100px;
+    margin-right: 10px;
+  }

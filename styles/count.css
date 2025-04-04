@@ -1,0 +1,59 @@
+/* Overall section styling */
+.stats {
+    background: #f9f8f5;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/mushroom.jpeg");
+}
+
+/* Flexbox container */
+.count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Individual stat block */
+.stat {
+    text-align: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* Number styling */
+.stat p {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Description styling */
+.stat h4 {
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+    max-width: 200px;
+    margin: auto;
+    color:white
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .count {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .separator {
+        width: 50%;
+        height: 2px;
+        margin: 10px auto;
+    }
+}

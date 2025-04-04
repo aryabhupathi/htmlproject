@@ -1,0 +1,143 @@
+.process {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    background-color: #f9f8f5;
+    flex-wrap: wrap;
+}
+
+/* Text Section */
+.text-section {
+    max-width: 50%;
+}
+
+.text-section h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #666;
+}
+
+.steps {
+    margin-top: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    font-size: 50px;
+    font-weight: bold;
+    color: #322D2D  ;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    background: linear-gradient(to right, #9E6718, #FFB545);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.step-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background: #d4af37;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #b8972e;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    max-width: 45%;
+}
+
+.video-overlay {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.video-preview {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Play Button Styling */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-button i {
+    font-size: 24px;
+}
+
+.play-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .process {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        max-width: 100%;
+    }
+
+    .video-container {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .steps {
+        text-align: left;
+    }
+}
+

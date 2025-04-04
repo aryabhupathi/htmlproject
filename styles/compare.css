@@ -1,0 +1,86 @@
+.comparison-table {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  margin: 50px auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comparison-table h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+td {
+  color: #333;
+}
+.highlight {
+  background: #f0eee6;
+  font-weight: bold;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product img {
+  max-width: 50px;
+  margin-bottom: 5px;
+}
+.check {
+  color: #4caf50;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cross {
+  color: #d9534f;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cta-container {
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+  .product img {
+    max-width: 40px;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-bottom: 1px solid black;
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+th {
+  font-weight: bold;
+}
+th img,
+td img {
+  width: 80px;
+  height: 100px;
+  object-fit: contain;
+}
+td:first-child,
+th:first-child {
+  font-weight: bold;
+  text-align: left;
+}

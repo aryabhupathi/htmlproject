@@ -1,0 +1,85 @@
+.founders {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+
+.video-section {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.video-preview-section {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 193, 7, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-button i {
+    color: white;
+    font-size: 20px;
+}
+
+.play-button:hover {
+    background: rgba(255, 193, 7, 1);
+}
+
+/* Text Section */
+.founder-content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.founder-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.founder-content p {
+    font-size: 16px;
+    color: #444;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.about-button {
+    background-color: #d4af37;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+    margin-top: 15px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.about-button:hover {
+    background: #b8972e;
+}

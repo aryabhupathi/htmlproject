@@ -30,13 +30,3 @@
   height: 50px;
   object-fit: contain;
 }
-@media (max-width: 768px) {
-  .brands {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  .brand-item img {
-    width: 100px;
-    height: 40px;
-  }
-}

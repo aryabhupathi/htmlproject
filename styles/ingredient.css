@@ -40,16 +40,3 @@
   margin-bottom: 20px;
   color: #322d2d;
 }
-@media (max-width: 768px) {
-  .ingredients-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
-  .ingredients-content {
-    max-width: 100%;
-  }
-  .ingredients-image img {
-    max-width: 80%;
-  }
-}

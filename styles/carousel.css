@@ -132,9 +132,5 @@
   font-size: 36px;
   color: #322d2d;
   margin: 0;
-}
-@media (max-width: 768px) {
-  .cartfull {
-    flex-direction: column;
-  }
+  font-weight: lighter;
 }

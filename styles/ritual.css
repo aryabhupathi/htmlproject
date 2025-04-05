@@ -60,22 +60,6 @@
 .play-button:hover {
   background: rgba(0, 0, 0, 0.8);
 }
-@media (max-width: 1024px) {
-  .process {
-    flex-direction: column;
-    text-align: center;
-  }
-  .text-section {
-    max-width: 100%;
-  }
-  .video-container {
-    max-width: 100%;
-    margin-top: 30px;
-  }
-  .steps {
-    text-align: left;
-  }
-}
 .process {
   display: flex;
   width: 100%;
@@ -111,3 +95,4 @@
   object-fit: cover; /* Ensures it fills the container */
   border-radius: 10px;
 }
+

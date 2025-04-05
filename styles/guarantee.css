@@ -16,6 +16,10 @@
   gap: 8px;
   white-space: nowrap;
 }
+.guarantee-item img {
+ height: 30px;
+ width: 30px;
+}
 .guarantee-item i {
   font-size: 26px;
 }
@@ -28,6 +32,7 @@
 .guarantee-item h4 {
   margin: 0;
   font-size: 20px;
+  font-weight: lighter;
 }
 .guarantee-item h4 {
   color: #322d2d;
@@ -45,21 +50,4 @@
   background: linear-gradient(to right, #caa648, #e2c065, #bb9a3c);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-@media (max-width: 768px) {
-  .guarantee {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-  .guarantee-item {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-  .title {
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
 }

@@ -56,11 +56,3 @@
 .counter p {
   margin: 0;
 }
-@media (max-width: 768px) {
-  .count {
-    flex-direction: column;
-  }
-  .stat {
-    margin-bottom: 20px;
-  }
-}

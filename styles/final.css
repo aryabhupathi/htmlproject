@@ -4,6 +4,7 @@ body {
   font-family: "NewRailAlphabet-White";
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -17,7 +18,7 @@ h5 {
 }
 .cta-btn {
   background: linear-gradient(to right, #caa648, #e2c065, #bb9a3c);
-  color: black;
+  color: #322D2D;
   border: none;
   padding: 12px 25px;
   border-radius: 25px;
@@ -35,9 +36,10 @@ h5 {
   display: flex;
   justify-content: center;
 }
-.section h1 {
+.section1 h1 {
   font-size: 36px;
   color: #322d2d;
+  font-weight: lighter;
 }
 .start {
   background-color: #322d2d;

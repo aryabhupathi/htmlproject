@@ -2,7 +2,6 @@
   padding: 20px;
   margin: 0 auto;
   width: 90%;
-  background-color: #f0efeb;
 }
 .reviews-header {
   display: flex;
@@ -155,11 +154,10 @@
 .dot:hover {
   background-color: #999;
 }
-@media (max-width: 768px) {
-  .review-card {
-    flex: 0 0 calc(100% - 10px);
-  }
-}
+
 .stars i {
   color: #12b884;
+}
+.review-main{
+  background-color: #f0efeb;
 }

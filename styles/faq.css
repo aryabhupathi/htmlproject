@@ -43,7 +43,7 @@
   min-width: 350px;
 }
 .faq-item {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #322D2D;
   padding: 10px 0;
   transition: all 0.3s ease-in-out;
 }
@@ -95,19 +95,6 @@
 }
 .faq-link:hover {
   text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .faq-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
-  .faq-left {
-    margin-bottom: 20px;
-  }
-  .faq-question {
-    font-size: 16px;
-  }
 }
 .faq-right p {
   text-align: center;

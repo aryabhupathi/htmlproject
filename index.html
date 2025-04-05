@@ -36,10 +36,13 @@
     <h3>Get 25% off your first month. Free Shipping on U.S orders.</h3>
   </section>
   <nav class="navbar">
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
     <div class="logo">ALCAMI</div>
     <div class="nav-links-container">
       <ul class="nav-links">
-        <li><a href="shop">Shop <i class="fa-solid fa-angle-down" style="color: #322D2D;"></i></a></li>
+        <li><a href="shop">Shop <i class="fa-solid fa-angle-down"></i></a></li>
         <li><a href="element">Elements</a></li>
         <li><a href="about">About Us</a></li>
         <li><a href="blog">Blog</a></li>
@@ -62,22 +65,22 @@
     <div class="hero-content">
       <div class="hero-text1">
         <div class="rating">
-          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star" style="color: #ffd43b;padding-right: 10px;"></i>
           <p>4.8 star rating</p>
         </div>
         <p>Awarded the top adaptogen blend in the world</p>
       </div>
       <h1>Achieve your highest self.</h1>
       <div class="hero-text2">
-        <div>
+        <div class="hero-text3">
           <h3>10x</h3>
           <span>concentration</span>
         </div>
-        <div>
+        <div class="hero-text3">
           <h3>9</h3>
           <span>powerful ingredients</span>
         </div>
-        <div>
+        <div class="hero-text3">
           <h3>1000mg</h3>
           <span>of adaptogens per dose</span>
         </div>
@@ -111,28 +114,34 @@
       <h3>OUR GUARANTEE</h3>
     </div>
     <div class="guarantee-item">
-      <i class="fa-regular fa-heart"></i>
+      <div>
+        <img src="./assets/heart.png" />
+      </div>
       <div>
         <h4>30-Day Guarantee</h4>
         <sub>Love Alcami or send it back</sub>
       </div>
     </div>
     <div class="guarantee-item">
-      <i class="fa-solid fa-earth-asia"></i>
+      <div>
+        <img src="./assets/globe.png" />
+      </div>
       <div>
         <h4>Worldwide Shipping</h4>
         <sub>Alcami ships everywhere</sub>
       </div>
     </div>
     <div class="guarantee-item">
-      <i class="fa-solid fa-cube"></i>
+      <div>
+        <img src="./assets/pack.png" />
+      </div>
       <div>
         <h4>Fast Delivery</h4>
         <sub>On-time quick shipping</sub>
       </div>
     </div>
     <div class="guarantee-item">
-      <i class="fa-solid fa-recycle"></i>
+      <div><img src="./assets/eco.png" /> </div>
       <div>
         <h4>Eco Certified</h4>
         <sub>Carbon-neutral eco packaging</sub>
@@ -140,14 +149,14 @@
     </div>
   </section>
   <section class="brands">
-    <div class="brand-item">
+    <div>
       <p>AS SEEN IN</p>
     </div>
     <div class="brand-item">
-      <img src="/assets/Fast_Company.png" alt="Fast Company Logo" />
+      <img src="/assets/fc.png" alt="Fast Company Logo" />
     </div>
     <div class="brand-item">
-      <img src="/assets/Forbes-Logo.png" alt="Forbes Logo" />
+      <img src="/assets/forbe.png" alt="Forbes Logo" />
     </div>
     <div class="brand-item">
       <img src="/assets/time.png" style="height: 30px" alt="TIME Logo" />
@@ -156,7 +165,7 @@
       <img src="/assets/goop.png" style="height: 80px" alt="Goop Logo" />
     </div>
     <div class="brand-item">
-      <img src="/assets/The_New_York_Times_logo.png" style="height: 50px" alt="NY Times Logo" />
+      <img src="/assets/nyt.png" style="height: 50px" alt="NY Times Logo" />
     </div>
   </section>
   <section class="cartfull">
@@ -256,7 +265,7 @@
                 <div class="plus-sign">+</div>
                 <div class="option-box">
                   <h4>One Time <span class="free-tag">(Free)</span></h4>
-                  <img src="./assets/free.png" alt="Alcami Package" style="background-color: #f9f5f0;">
+                  <img src="./assets/free1.png" alt="Alcami Package" style="background-color: #f9f5f0;">
                 </div>
               </div>
             </div>
@@ -376,7 +385,7 @@
     </div>
   </section>
   <section class="cards">
-    <div class="cards-container">=
+    <div class="cards-container">
       <div class="image-container">
         <img src="./assets/shila.png" class="main-image" alt="Himalayan Shilajit">
       </div>
@@ -427,6 +436,7 @@
   <section class="subscription">
     <div class="subscription-image">
       <img src="/assets/subscribe.png" alt="Subscription Offer">
+      <img src="/assets/subscribe1.png" alt="Subscription Offer">
       <div class="subscription-content">
         <span class="subscription-label">SUBSCRIPTION</span>
         <h2>Subscribe & save <strong>20%</strong> + free frother, bottle, and spoon</h2>
@@ -519,6 +529,13 @@
         </h4>
       </div>
     </div>
+  </section>
+  <section style="text-align: center; font-weight: bold;padding: 10px;">
+    <p>
+      <span style="padding: 5px;">-</span>
+      <span style="padding: 5px;">-</span>
+      <span style="padding: 5px;">-</span>
+    </p>
   </section>
   <section class="comparison-table">
     <h2>Why Alcami is the #1 Choice for your <br />Productivity and Performance</h2>
@@ -638,82 +655,84 @@
       </div>
     </div>
   </section>
-  <section class="reviews-container">
-    <div class="reviews-header">
-      <div>
-        <h2 class="reviews-title">What our customers are saying</h2>
-        <p class="reviews-subtitle">Real people, real reviews.</p>
-      </div>
-      <div class="navigation-buttons">
-        <button class="nav-button prev" onclick="moveSlide(-1)">
-          <i class="fa-solid fa-arrow-left-long"></i>
-        </button>
-        <button class="nav-button next" onclick="moveSlide(1)">
-          <i class="fa-solid fa-arrow-right-long"></i>
-        </button>
-      </div>
-    </div>
-    <div class="reviews-slider-container">
-      <div id="reviews-slider" class="reviews-content">
-        <div class="review-card">
-          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-            eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">👤</div>
-            <div class="reviewer-info">
-              <span class="reviewer-name">Name Surname</span>
-              <span class="reviewer-position">Position, Company name</span>
-            </div>
-          </div>
+  <section class="review-main">
+    <div class="reviews-container">
+      <div class="reviews-header">
+        <div>
+          <h2 class="reviews-title">What our customers are saying</h2>
+          <p class="reviews-subtitle">Real people, real reviews.</p>
         </div>
-        <div class="review-card">
-          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-            eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">👤</div>
-            <div class="reviewer-info">
-              <span class="reviewer-name">Name Surname</span>
-              <span class="reviewer-position">Position, Company name</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-            eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">👤</div>
-            <div class="reviewer-info">
-              <span class="reviewer-name">Name Surname</span>
-              <span class="reviewer-position">Position, Company name</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-            eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
-          <div class="reviewer">
-            <div class="reviewer-avatar">👤</div>
-            <div class="reviewer-info">
-              <span class="reviewer-name">Name Surname</span>
-              <span class="reviewer-position">Position, Company name</span>
-            </div>
-          </div>
+        <div class="navigation-buttons">
+          <button class="nav-button prev" onclick="moveSlide(-1)">
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </button>
+          <button class="nav-button next" onclick="moveSlide(1)">
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
         </div>
       </div>
-    </div>
-    <div class="dots-navigation">
-      <div class="dot active" onclick="goToSlide(0)"></div>
-      <div class="dot" onclick="goToSlide(1)"></div>
-      <div class="dot" onclick="goToSlide(2)"></div>
-      <div class="dot" onclick="goToSlide(3)"></div>
+      <div class="reviews-slider-container">
+        <div id="reviews-slider" class="reviews-content">
+          <div class="review-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+              eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">👤</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Name Surname</span>
+                <span class="reviewer-position">Position, Company name</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+              eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">👤</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Name Surname</span>
+                <span class="reviewer-position">Position, Company name</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+              eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">👤</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Name Surname</span>
+                <span class="reviewer-position">Position, Company name</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+              eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">👤</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Name Surname</span>
+                <span class="reviewer-position">Position, Company name</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dots-navigation">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+        <div class="dot" onclick="goToSlide(3)"></div>
+      </div>
     </div>
   </section>
   <section class="faq">

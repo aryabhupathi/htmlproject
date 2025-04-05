@@ -6,28 +6,37 @@
 }
 .cards-container {
   display: flex;
-  gap: 50px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
 }
-.cards-image img {
-  width: 500px;
+.image-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.image-container img {
+  width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: contain;
 }
 .cards-content {
-  flex: 1;
+  width: 60%;
   text-align: left;
 }
 .cards-content h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
-  color: #2c2c2c;
+  color: #322d2d;
   margin-bottom: 5px;
 }
 .subtitle {
   color: #322d2d;
   margin-bottom: 25px;
+  font-size: 12px;
 }
 .card-container {
   display: grid;
@@ -41,7 +50,7 @@
   border-radius: 12px;
   display: flex;
   align-items: flex-start;
-  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
 .card:hover {
@@ -53,35 +62,42 @@
   margin-right: 10px;
 }
 .card-content h3 {
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   margin-top: 0;
 }
 .card-content p {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
 }
-.action-btn {
-  display: inline-block;
-  background: #e4b857;
-  color: white;
-  font-size: 16px;
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #d8772a;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
-.action-btn:hover {
-  background: #d1a34e;
+.cta-btn:hover {
+  background: #c26520;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .cards-container {
     flex-direction: column;
     text-align: center;
   }
-  .cards-image img {
-    width: 250px;
+  .image-container {
+    width: 80%;
+  }
+  .cards-content {
+    width: 100%;
   }
   .card-container {
     grid-template-columns: 1fr;
@@ -89,21 +105,4 @@
   .card {
     text-align: left;
   }
-}
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-.main-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.overlay-image {
-  position: absolute;
-  bottom: -10px;
-  left: 5%;
-  width: 20%;
-  height: auto;
-  z-index: 2;
 }

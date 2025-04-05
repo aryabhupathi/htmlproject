@@ -8,7 +8,7 @@
   align-items: center;
 }
 .comparison-table h2 {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
@@ -24,15 +24,19 @@ td {
 .highlight {
   background: #f0eee6;
   font-weight: bold;
+  letter-spacing: 5px;
 }
 .product {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 150px;
 }
 .product img {
-  max-width: 50px;
-  margin-bottom: 5px;
+  width: auto;
+  object-fit: cover;
+  padding-top: 20px;
 }
 .check {
   color: #4caf50;
@@ -63,6 +67,9 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+td i {
+  color: #667744;
+}
 th,
 td {
   border-bottom: 1px solid black;
@@ -72,6 +79,7 @@ td {
 }
 th {
   font-weight: bold;
+  font-size: 16px;
 }
 th img,
 td img {

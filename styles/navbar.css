@@ -3,15 +3,16 @@
   align-items: center;
   justify-content: space-between;
   background: white;
-  padding: 15px 30px;
+  padding: 10px 40px;
   transition: all 0.3s ease-in-out;
   position: relative;
+  box-sizing: border-box;
 }
 .logo {
   font-size: 24px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  color: #322D2D;
+  color: #322d2d;
   letter-spacing: 10px;
 }
 .nav-links-container {
@@ -32,16 +33,16 @@
 }
 .nav-links li a {
   text-decoration: none;
-  color: #322D2D;
+  color: #322d2d;
   font-size: 16px;
 }
-.abc {
+.searchbox {
   display: flex;
   align-items: center;
   flex: 1;
-  justify-content: center;
+  justify-content: end;
   gap: 10px;
-  width:200px
+  width: 200px;
 }
 .search-wrapper {
   display: flex;

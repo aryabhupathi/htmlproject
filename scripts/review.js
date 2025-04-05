@@ -1,70 +1,54 @@
-const cardsContainer = document.querySelector(".testimonial-cards");
-const cards = document.querySelectorAll(".testimonial-card");
-const dotsContainer = document.querySelector(".dots-container");
-const leftBtn = document.querySelector(".left-btn");
-const rightBtn = document.querySelector(".right-btn");
-let index = 0;
-const visibleCards = 4;
-const totalCards = cards.length;
-for (let i = 0; i < visibleCards; i++) {
-  let clone = cards[i].cloneNode(true);
-  cardsContainer.appendChild(clone);
+let currentSlide = 0;
+let slider,
+  reviewCards,
+  dots,
+  slideCount,
+  cardWidth,
+  gap,
+  visibleSlides,
+  maxSlide;
+function initSlider() {
+  slider = document.getElementById("reviews-slider");
+  reviewCards = document.querySelectorAll(".review-card");
+  dots = document.querySelectorAll(".dot");
+  slideCount = reviewCards.length;
+  cardWidth = reviewCards[0].offsetWidth;
+  gap = 20;
+  visibleSlides = getVisibleSlides();
+  maxSlide = Math.max(0, slideCount - visibleSlides);
+  updateSliderPosition();
 }
-function createDots() {
-  dotsContainer.innerHTML = "";
-  for (let i = 0; i < totalCards; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    dot.dataset.index = i;
-    dot.addEventListener("click", () => moveToIndex(i));
-    dotsContainer.appendChild(dot);
-  }
+function getVisibleSlides() {
+  return window.innerWidth <= 768 ? 1 : 3;
 }
-createDots();
-updateDots();
-function moveToIndex(i) {
-  index = i;
-  updateCarousel();
-}
-function moveNext() {
-  if (index >= totalCards) {
-    index = 0;
-    cardsContainer.style.transition = "none";
-    cardsContainer.style.transform = `translateX(0%)`;
-    setTimeout(() => {
-      cardsContainer.style.transition = "transform 0.5s ease-in-out";
-      index++;
-      updateCarousel();
-    }, 50);
-  } else {
-    index++;
-    updateCarousel();
-  }
-}
-function movePrev() {
-  if (index <= 0) {
-    index = totalCards;
-    cardsContainer.style.transition = "none";
-    cardsContainer.style.transform = `translateX(-${index * 25}%)`;
-    setTimeout(() => {
-      cardsContainer.style.transition = "transform 0.5s ease-in-out";
-      index--;
-      updateCarousel();
-    }, 50);
-  } else {
-    index--;
-    updateCarousel();
-  }
-}
-function updateCarousel() {
-  cardsContainer.style.transform = `translateX(-${index * 25}%)`;
-  updateDots();
-}
-function updateDots() {
-  document.querySelectorAll(".dot").forEach((dot, i) => {
-    dot.classList.toggle("active", i === index % totalCards);
+function updateSliderPosition() {
+  if (!slider) return;
+  const slideWidth = cardWidth + gap;
+  const transform = -currentSlide * slideWidth;
+  slider.style.transform = `translateX(${transform}px)`;
+  dots.forEach((dot, index) => {
+    if (index === currentSlide) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
   });
 }
-rightBtn.addEventListener("click", moveNext);
-leftBtn.addEventListener("click", movePrev);
-setInterval(moveNext, 4000);
+function moveSlide(direction) {
+  currentSlide = Math.max(0, Math.min(maxSlide, currentSlide + direction));
+  updateSliderPosition();
+}
+function goToSlide(index) {
+  currentSlide = Math.min(index, maxSlide);
+  updateSliderPosition();
+}
+document.addEventListener("DOMContentLoaded", function () {
+  initSlider();
+  window.addEventListener("resize", function () {
+    cardWidth = document.querySelector(".review-card").offsetWidth;
+    visibleSlides = getVisibleSlides();
+    maxSlide = Math.max(0, slideCount - visibleSlides);
+    currentSlide = Math.min(currentSlide, maxSlide);
+    updateSliderPosition();
+  });
+});

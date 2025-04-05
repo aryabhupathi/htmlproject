@@ -1,92 +1,165 @@
-
-
-.testimonial-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left; /* Ensure text starts at left */
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.reviews-container {
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  background-color: #f0efeb;
 }
-
-.testimonial-header h2 {
-    margin: 0;
-    font-size: 24px;
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
-
-.testimonial-header p {
-    margin-top: 5px;
-    font-size: 16px;
-    color: #666;
+.reviews-title {
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
 }
-
-.nav-buttons {
-    display: flex;
-    gap: 10px;
+.reviews-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-top: 4px;
 }
-
-.nav-btn {
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    border:1px solid black
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
 }
-
-.nav-btn:hover {
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    border:1px solid black
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.testimonial-container {
-    display: flex;
-    overflow: hidden;
-    position: relative;
+.nav-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
 }
-
-.testimonial-cards {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.nav-button.prev {
+  color: #555;
 }
-
-.testimonial-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 0 0 25%;
-    margin: 10px;
+.nav-button.next {
+  background-color: #333;
+  color: white;
+  border: none;
 }
-
+.nav-button:active,
+.nav-button.active {
+  transform: scale(0.95);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.nav-button.prev:active,
+.nav-button.prev.active {
+  background-color: #e0e0e0;
+}
+.nav-button.next:active,
+.nav-button.next.active {
+  background-color: #000;
+}
+.reviews-slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.reviews-content {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease;
+  width: 100%;
+}
+.review-card {
+  flex: 0 0 calc(33.333% - 14px);
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.review-card.active {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 200, 83, 0.2);
+}
+.review-card.active:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #00c853;
+  border-radius: 8px 8px 0 0;
+}
 .stars {
-    color: gold;
-    font-size: 20px;
+  color: #00c853;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
-
-.user-info {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+.review-text {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
-
-.avatar {
-    width: 40px;
-    height: 40px;
-    background: gray;
-    border-radius: 50%;
-    margin-right: 10px;
+.reviewer {
+  display: flex;
+  align-items: center;
 }
-.dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 10px;
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: #999;
+}
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+}
+.reviewer-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.reviewer-position {
+  font-size: 12px;
+  color: #777;
+}
+.dots-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dot.active {
+  background-color: #333;
+  transform: scale(1.2);
+}
+.dot:hover {
+  background-color: #999;
+}
+@media (max-width: 768px) {
+  .review-card {
+    flex: 0 0 calc(100% - 10px);
+  }
+}
+.stars i {
+  color: #12b884;
 }

@@ -2,51 +2,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background:#F9F9F9;
-  gap: 20px;
-  flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+  background: #f9f9f9;
+  flex-wrap: wrap;
   margin-top: 15px;
   border-radius: 15px;
   padding: 10px;
+  width: 90%;
+  justify-self: center;
 }
-
 .guarantee-item {
   display: flex;
   align-items: center;
-  gap: 8px; /* Reduced gap */
-  white-space: nowrap; /* Prevents text from wrapping */
+  gap: 8px;
+  white-space: nowrap;
 }
-
-/* Ensure icons are properly spaced */
 .guarantee-item i {
-  font-size: 26px; /* Slightly smaller */
+  font-size: 26px;
 }
-
-/* Text Container */
 .guarantee-item div {
   display: flex;
   flex-direction: column;
-  line-height: 1.2; /* Adjusted line height */
+  line-height: 1.2;
 }
-
-/* Titles inside guarantee items */
-.guarantee-item h3, 
+.guarantee-item h3,
 .guarantee-item h4 {
   margin: 0;
   font-size: 20px;
 }
-
-.guarantee-item h4 {color:#322D2D; padding-bottom: 2px;}
-
-/* Subtext (smaller text under h3/h4) */
+.guarantee-item h4 {
+  color: #322d2d;
+  padding-bottom: 2px;
+}
 .guarantee-item sub {
-  margin-top: -3px; /* Reduced space */
+  margin-top: -3px;
   font-size: 16px;
   color: #666666;
 }
-/* "Our Guarantee" Title */
 .guarantee-title {
-  /* color: #caa748; */
   font-size: 17px;
   font-weight: bold;
   white-space: nowrap;
@@ -54,24 +46,20 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* Responsive Fix */
 @media (max-width: 768px) {
   .guarantee {
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
-
   .guarantee-item {
-      flex-direction: column;
-      align-items: center;
-      gap: 5px; /* Reduced gap further */
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
-
   .title {
-      flex-basis: 100%;
-      text-align: center;
-      margin-bottom: 10px;
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }

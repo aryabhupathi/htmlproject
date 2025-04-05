@@ -1,59 +1,66 @@
-/* Overall section styling */
 .stats {
-    background: #f9f8f5;
-    padding: 40px 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("/assets/mushroom.jpeg");
+  position: relative;
+  background: url("/assets/mushroom.jpeg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
-
-/* Flexbox container */
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.stats .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
 .count {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 150px;
+  z-index: 2;
 }
-
-/* Individual stat block */
 .stat {
-    text-align: center;
-    flex: 1;
-    padding: 0 20px;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
 }
-
-/* Number styling */
-.stat p {
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
+.stat .counter {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0;
 }
-
-/* Description styling */
 .stat h4 {
-    font-size: 14px;
-    color: #666;
-    font-weight: 400;
-    max-width: 200px;
-    margin: auto;
-    color:white
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 220px;
+  margin: auto;
 }
-
-
-
-/* Responsive Design */
+.counter p {
+  margin: 0;
+}
 @media (max-width: 768px) {
-    .count {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .separator {
-        width: 50%;
-        height: 2px;
-        margin: 10px auto;
-    }
+  .count {
+    flex-direction: column;
+  }
+  .stat {
+    margin-bottom: 20px;
+  }
 }

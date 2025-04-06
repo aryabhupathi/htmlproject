@@ -39,7 +39,7 @@
   font-family: "Oxanium", sans-serif;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px;margin-bottom: 10px;
 }
 .footer-column i {
   font-size: 15px;
@@ -131,10 +131,11 @@
   .footer-links {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
+    padding: 20px;
   }
   .footer-column {
     flex-direction: row;
@@ -143,6 +144,7 @@
   .footer-column a {
     font-size: 14px;
     white-space: nowrap;
+    margin-bottom: 10px;
   }
   .footer-right {
     justify-content: center;

@@ -7,8 +7,7 @@
   box-sizing: border-box;
 }
 .hero-content {
-  flex: 1;
-  max-width: 50%;
+  max-width: 60%;
 }
 .hero-content h1 {
   font-weight: bold;
@@ -17,12 +16,14 @@
   font-size: 50px;
 }
 .hero-text1 {
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   display: flex;
   border-radius: 20px;
   align-items: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   gap: 10px;
+}
+.hero-text1 p {
+  font-size: 16px;
 }
 .rating {
   background-color: white;
@@ -54,6 +55,7 @@
 }
 .hero-text2 span {
   color: #666;
+  font-size: 22px;
 }
 .hero-image {
   flex: 1;

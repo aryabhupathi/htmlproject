@@ -18,7 +18,7 @@ h5 {
 }
 .cta-btn {
   background: linear-gradient(to right, #caa648, #e2c065, #bb9a3c);
-  color: #322d2d;
+  color: #000000;
   border: none;
   padding: 12px 25px;
   border-radius: 25px;
@@ -27,7 +27,7 @@ h5 {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .cta-btn:hover {
   transform: scale(1.05);
@@ -39,7 +39,10 @@ h5 {
 .section1 h1 {
   font-size: 36px;
   color: #322d2d;
-  font-weight: lighter;
+  font-weight: 300;
+  padding: 0 100px;
+  border: 2px solid #e2c065;
+  border-radius: 5px;
 }
 .start {
   background-color: #322d2d;

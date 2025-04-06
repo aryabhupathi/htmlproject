@@ -24,11 +24,12 @@
 }
 .ingredients-content h3 {
   color: #e4c267;
-  font-size: 23px;
+  font-size: 24px;
   margin-bottom: 10px;
   background: linear-gradient(to right, #9e6718, #ffb545);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
 }
 .ingredients-content h2 {
   font-size: 36px;
@@ -39,6 +40,7 @@
   font-size: 21px;
   margin-bottom: 20px;
   color: #322d2d;
+  line-height: 30px;
 }
 @media (max-width: 768px) {
   .ingredients {

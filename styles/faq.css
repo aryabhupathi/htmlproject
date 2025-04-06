@@ -14,7 +14,8 @@
 }
 .faq-left h2 {
   font-size: 40px;
-  color: #333;margin: 0;
+  color: #333;
+  margin: 0;
 }
 .faq-left p {
   font-size: 20px;
@@ -37,11 +38,11 @@
   background: #b8972e;
 }
 .faq-right {
-  flex: 2;
+  flex: 1.5;
   min-width: 350px;
 }
 .faq-item {
-  border-bottom: 1px solid #322D2D;
+  border-bottom: 1px solid #322d2d;
   padding: 10px 0;
   transition: all 0.3s ease-in-out;
 }

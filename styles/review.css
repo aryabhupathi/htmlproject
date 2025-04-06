@@ -99,7 +99,6 @@ button:disabled {
 }
 .reviewer-name {
   font-size: 16px;
-  font-weight: bold;
 }
 .reviewer-position {
   font-size: 14px;
@@ -126,4 +125,7 @@ button:disabled {
   .review-card {
     width: 90%;
   }
+}
+.stars {
+  color: #00b67a;
 }

@@ -65,7 +65,7 @@
   transition: background-color 0.3s ease;
 }
 .dot.active {
-  background-color: #4a90e2;
+  background-color: #E4C267;
 }
 .thumbnails {
   display: flex;
@@ -83,7 +83,7 @@
   transition: border-color 0.3s ease;
 }
 .thumbnail.active {
-  border-color: #4a90e2;
+  border-color: #E4C267;
 }
 .cartfull {
   display: flex;

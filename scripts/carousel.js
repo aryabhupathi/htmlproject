@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const images = [
-    "./assets/free.png",
     "./assets/slide1.webp",
     "./assets/slide2.webp",
     "./assets/slide3.webp",
     "./assets/slide4.webp",
     "./assets/slide5.webp",
+    "./assets/free.png",
   ];
   let currentIndex = 0;
   const mainImage = document.getElementById("mainImage");

@@ -37,6 +37,8 @@
   color: #322d2d;
   margin-bottom: 25px;
   font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 .card-container {
   display: grid;
@@ -50,8 +52,8 @@
   border-radius: 12px;
   display: flex;
   align-items: flex-start;
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
 }
 .card:hover {
   transform: translateY(-3px);
@@ -63,8 +65,9 @@
 }
 .card-content h3 {
   font-size: 18px;
-  color: #333;
+  color: #666666;
   margin-top: 0;
+  font-weight: 700;
 }
 .card-content p {
   font-size: 16px;

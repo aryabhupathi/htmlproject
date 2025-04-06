@@ -39,9 +39,6 @@
   background-color: #f0f0f0;
   transform: scale(1.05);
 }
-.nav-button.prev {
-  color: #555;
-}
 .nav-button.next {
   background-color: #333;
   color: white;
@@ -52,14 +49,6 @@
   transform: scale(0.95);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
-.nav-button.prev:active,
-.nav-button.prev.active {
-  background-color: #e0e0e0;
-}
-.nav-button.next:active,
-.nav-button.next.active {
-  background-color: #000;
-}
 .reviews-slider-container {
   overflow: hidden;
   position: relative;
@@ -67,23 +56,17 @@
 }
 .reviews-content {
   display: flex;
-  gap: 20px;
-  transition: transform 0.4s ease;
-  width: 100%;
+  gap: 10px;
+  transition: transform 0.4s ease-in-out;
 }
 .review-card {
-  flex: 0 0 calc(33.333% - 14px);
+  flex: 0 0 calc(100% / 3 - 10px);
   background-color: white;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   position: relative;
-}
-.review-card.active {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 200, 83, 0.2);
 }
 .review-card.active:before {
   content: "";
@@ -92,7 +75,6 @@
   left: 0;
   right: 0;
   height: 3px;
-  background-color: #00c853;
   border-radius: 8px 8px 0 0;
 }
 .stars {
@@ -119,7 +101,6 @@
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-  color: #999;
 }
 .reviewer-info {
   display: flex;
@@ -133,31 +114,40 @@
   font-size: 12px;
   color: #777;
 }
-.dots-navigation {
+.dots-navigationr {
   display: flex;
   justify-content: center;
   gap: 5px;
   margin-top: 20px;
 }
-.dot {
-  width: 8px;
-  height: 8px;
+.dotr {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #bbb;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.dot.active {
-  background-color: #333;
+.dotr.active {
+  background-color: #e2c065;
   transform: scale(1.2);
 }
-.dot:hover {
-  background-color: #999;
+.dotr:hover {
+  background-color: #f0b442;
+  transform: scale(1.2);
 }
-
-.stars i {
-  color: #12b884;
-}
-.review-main{
-  background-color: #f0efeb;
+@media (max-width: 768px) {
+  .reviews-container {
+    width: 100%;
+    padding: 15px;
+  }
+  .reviews-title {
+    font-size: 24px;
+  }
+  .review-card {
+    flex: 0 0 100%;
+  }
+  .dots-navigationr {
+    margin-top: 15px;
+  }
 }

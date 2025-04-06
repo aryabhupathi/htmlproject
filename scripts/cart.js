@@ -10,3 +10,4 @@ function addToCart() {
     notification.style.display = "none";
   }, 3000);
 }
+

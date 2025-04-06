@@ -15,8 +15,7 @@
 }
 .faq-left h2 {
   font-size: 40px;
-  color: #333;
-  margin-bottom: 10px;
+  color: #333;margin: 0;
 }
 .faq-left p {
   font-size: 20px;

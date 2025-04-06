@@ -2,90 +2,65 @@
   text-align: center;
   font-family: "Arial", sans-serif;
   margin: 0 auto;
-  width: 90%; /* Adjusted for responsiveness */
-  max-width: 1000px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: auto; /* Enables scrolling on small screens */
+  overflow-x: auto;
 }
-
 .comparison-table h2 {
-  font-size: 28px; /* Adjusted for mobile readability */
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
 }
-
-/* Make table responsive */
 .table-wrapper {
   width: 100%;
-  overflow-x: auto; /* Horizontal scrolling */
+  overflow-x: auto;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  min-width: 600px; /* Prevents table from shrinking too much */
+  min-width: 600px;
 }
-
-th, td {
-  border-bottom: 1px solid #322D2D;
+th,
+td {
+  border-bottom: 1px solid #322d2d;
   padding: 12px;
   text-align: center;
   vertical-align: middle;
-  font-size: 14px; /* Readable font size for mobile */
+  font-size: 14px;
 }
-
-th:first-child, td:first-child {
+th:first-child,
+td:first-child {
   text-align: left;
   font-weight: bold;
 }
-
 .highlight {
   background: #f0eee6;
   font-weight: bold;
   letter-spacing: 1px;
 }
-
-/* Style product headers */
 .product {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
 .product img {
   width: auto;
-  max-height: 80px; /* Resizes dynamically */
+  max-height: 80px;
   object-fit: contain;
   padding-top: 10px;
 }
-
 .check {
   color: #4caf50;
   font-size: 18px;
   font-weight: bold;
 }
-
 .cross {
   color: #d9534f;
   font-size: 18px;
   font-weight: bold;
 }
-
-/* CTA Button */
-.cta-container {
-  margin-top: 20px;
-}
-.cta-btn {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #ffcc00;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-

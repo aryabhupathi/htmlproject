@@ -1,0 +1,13 @@
+.about-section, .hero {
+    padding: 50px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff7f50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

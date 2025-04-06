@@ -86,6 +86,7 @@ td:first-child {
   }
   .table-wrapper {
     margin: 0 -10px;
+    display: block;
   }
   table {
     min-width: 600px;

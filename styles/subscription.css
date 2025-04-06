@@ -57,7 +57,7 @@
 }
 .subscribe-btn {
   background: gold;
-  color: #322D2D;
+  color: #322d2d;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -68,4 +68,33 @@
 }
 .subscribe-btn:hover {
   background: #d4a017;
+}
+.subscription-image1 {
+  display: none;
+}
+@media (max-width: 768px) {
+  .subscription {
+    flex-direction: column;
+    padding: 20px;
+    height: 250px;
+  }
+  .subscription-image {
+    display: none;
+  }
+  .subscription-content {
+    display: none;
+  }
+  .subscription-image1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .subscription-image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }

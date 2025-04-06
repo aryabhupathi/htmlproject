@@ -18,7 +18,7 @@ h5 {
 }
 .cta-btn {
   background: linear-gradient(to right, #caa648, #e2c065, #bb9a3c);
-  color: #322D2D;
+  color: #322d2d;
   border: none;
   padding: 12px 25px;
   border-radius: 25px;
@@ -43,11 +43,22 @@ h5 {
 }
 .start {
   background-color: #322d2d;
-  margin: 0;
   align-content: center;
 }
 .start h3 {
   text-align: center;
   color: #ffffff;
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .section1 {
+    display: flex;
+    justify-content: center;
+  }
+  .section1 h1 {
+    font-size: 36px;
+    color: #322d2d;
+    font-weight: lighter;
+    text-align: center;
+  }
 }

@@ -12,3 +12,24 @@
   gap: 15px;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .logoline {
+    gap: 15px;
+  }
+  .logoline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0;
+  }
+  .logotext {
+    width: 45%;
+  }
+  .logoline img {
+    width: 35px;
+    height: 35px;
+  }
+  .logotext h3 {
+    font-size: 14px;
+  }
+}

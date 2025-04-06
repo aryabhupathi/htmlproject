@@ -36,7 +36,13 @@
   color: #fff;
   font-size: 14px;
   transition: 0.3s;
-  font-family: "oxanium";
+  font-family: "Oxanium", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-column i {
+  font-size: 15px;
 }
 .footer-column a:hover {
   color: #ffb545;
@@ -107,4 +113,47 @@
 .subscribebb {
   width: 100px;
   font-family: "oxanium";
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .footer-column {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .footer-column a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .footer-right {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 90%;
+  }
 }

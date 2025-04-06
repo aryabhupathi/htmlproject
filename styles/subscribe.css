@@ -1,9 +1,8 @@
 .subscribe {
   position: relative;
-  width: 90%;
-  margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
+  padding: 40px;
 }
 .subscribe-container {
   position: relative;
@@ -11,26 +10,27 @@
 }
 .subscribe-image {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   filter: brightness(0.7);
+  border-radius: 20px;
 }
 .subscribe-content {
   position: absolute;
-  top: 5%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   width: 80%;
 }
 .subscribe-content h2 {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .subscribe-content p {
-  font-size: 21px;
+  font-size: 18px;
   margin-bottom: 15px;
 }
 .subscribe-form {
@@ -39,22 +39,25 @@
   gap: 5px;
 }
 .subscribe-form input {
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 16px;
   border-radius: 5px;
-  border: none;
-  width: 60%;
   border: 2px solid white;
   background: none;
+  color: white;
+  width: 60%;
+}
+.subscribe-form input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
 }
 .subscribe-form button {
   background-color: #ffb545;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
 }
 .subscribe-form button:hover {
   background-color: #9e6718;
@@ -69,4 +72,30 @@
   font-size: 16px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .subscribe-content {
+    width: 90%;
+  }
+  .subscribe-content h2 {
+    font-size: 28px;
+  }
+  .subscribe-content p {
+    font-size: 16px;
+  }
+  .subscribe-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe-form input {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .subscribe-form button {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+  }
 }

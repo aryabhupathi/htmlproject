@@ -1,5 +1,4 @@
 .founders {
-  width: 90%;
   margin: 40px;
   text-align: left;
 }
@@ -61,4 +60,28 @@
 }
 .founder-content button {
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .founders {
+    margin: 20px auto;
+  }
+  .video-section {
+    height: 300px;
+  }
+  .founder-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .founder-content h1 {
+    font-size: 28px;
+  }
+  .founder-content p {
+    font-size: 16px;
+    max-width: 90%;
+  }
+  .founder-content button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }

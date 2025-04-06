@@ -1,55 +1,34 @@
-// function toggleSearch() {
-//   let navbar = document.querySelector(".navbar");
-//   let searchContainer = document.querySelector(".search-container");
-//   let searchWrapper = document.querySelector(".search-wrapper");
-//   let searchInput = document.getElementById("search");
-//   let navLinks = document.querySelector(".nav-links");
-//   navbar.classList.toggle("search-active");
-//   if (navbar.classList.contains("search-active")) {
-//     navLinks.style.display = "none";
-//     searchWrapper.classList.add("centered");
-//     searchInput.focus();
-//   } else {
-//     navLinks.style.display = "flex";
-//     searchWrapper.classList.remove("centered");
-//     searchInput.value = "";
-//   }
-// }
-// function hideSearch() {
-//   let navbar = document.querySelector(".navbar");
-//   let navLinks = document.querySelector(".nav-links");
-//   let searchWrapper = document.querySelector(".search-wrapper");
-//   let searchInput = document.getElementById("search");
-//   if (!searchInput.value) {
-//     navbar.classList.remove("search-active");
-//     searchWrapper.classList.remove("centered");
-//     navLinks.style.display = "flex";
-//   }
-// }
-
 function toggleSearch() {
-  let navbar = document.querySelector(".navbar");
-  let searchInput = document.getElementById("search");
-
-  navbar.classList.toggle("search-active");
-
+  const navbar = document.querySelector(".navbar");
   if (navbar.classList.contains("search-active")) {
-    searchInput.focus();
+    document.getElementById("search").focus();
   } else {
-    searchInput.value = "";
+    navbar.classList.add("search-active");
+    setTimeout(() => {
+      document.getElementById("search").focus();
+    }, 300);
   }
 }
-
 function hideSearch() {
-  let navbar = document.querySelector(".navbar");
-  let searchInput = document.getElementById("search");
-
-  if (!searchInput.value) {
+  const navbar = document.querySelector(".navbar");
+  setTimeout(() => {
     navbar.classList.remove("search-active");
-  }
+  }, 200);
 }
-
 function toggleMenu() {
-  let menu = document.querySelector(".nav-links-container");
-  menu.classList.toggle("active");
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("menu-active");
 }
+window.addEventListener("DOMContentLoaded", () => {
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
+  function handleScreenChange(e) {
+    const navbar = document.querySelector(".navbar");
+    if (e.matches) {
+      navbar.classList.add("mobile-view");
+    } else {
+      navbar.classList.remove("mobile-view", "menu-active");
+    }
+  }
+  handleScreenChange(mediaQuery);
+  mediaQuery.addEventListener("change", handleScreenChange);
+});

@@ -4,11 +4,13 @@
   justify-content: space-between;
   background: #f9f9f9;
   flex-wrap: wrap;
-  margin-top: 15px;
   border-radius: 15px;
-  padding: 10px;
-  width: 90%;
+  padding: 5px;
+  width: 100%;
   justify-self: center;
+}
+.guarantees{
+  padding: 40px
 }
 .guarantee-item {
   display: flex;
@@ -17,8 +19,8 @@
   white-space: nowrap;
 }
 .guarantee-item img {
- height: 30px;
- width: 30px;
+  height: 30px;
+  width: 30px;
 }
 .guarantee-item i {
   font-size: 26px;
@@ -50,4 +52,36 @@
   background: linear-gradient(to right, #caa648, #e2c065, #bb9a3c);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 768px) {
+  .guarantee {
+    padding: 15px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .guarantee-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 90%;
+    max-width: 100%;
+    padding: 12px;
+    margin-left: 30px;
+  }
+  .guarantee-item img {
+    height: 35px;
+    width: 35px;
+  }
+  .guarantee-title {
+    font-size: 18px;
+  }
+  .guarantee-item h4 {
+    font-size: 16px;
+  }
+  .guarantee-item sub {
+    font-size: 13px;
+  }
 }

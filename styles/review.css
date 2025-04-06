@@ -1,173 +1,129 @@
+.review-main {
+  padding: 40px;
+  background-color: #f0efeb;
+  text-align: center;
+}
 .reviews-container {
-  padding: 20px;
   margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
 }
 .reviews-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
   margin-bottom: 20px;
+  text-align: left;
 }
 .reviews-title {
   font-size: 28px;
   color: #333;
-  font-weight: 600;
-  margin-bottom: 5px;
+  margin: 0;
 }
 .reviews-subtitle {
   font-size: 16px;
   color: #666;
+  margin: 0;
 }
 .navigation-buttons {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
 }
-.nav-button {
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#prevss,
+#nextss {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  font-size: 16px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
-.nav-button:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.05);
+#nextss {
+  background: black;
+  color: white;
+}
+#prevss:hover,
+#nextss:hover {
+  transform: scale(1.1);
 }
 .reviews-slider-container {
   overflow: hidden;
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 .reviews-content {
   display: flex;
-  gap: 10px;
-  transition: transform 0.4s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  transition: opacity 0.3s ease-in-out;
 }
 .review-card {
-  flex: 0 0 calc(100% / 3 - 10px);
   background-color: white;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  text-align: center;
+  width: 330px;
+  transition: transform 0.3s ease;
+  text-align: left;
 }
-.stars {
-  color: #00c853;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-.review-text {
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  font-size: 14px;
+.review-card:hover {
+  transform: translateY(-5px);
 }
 .reviewer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-top: 15px;
 }
 .reviewer-avatar {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-color: #eee;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+  font-size: 20px;
 }
 .reviewer-info {
   display: flex;
   flex-direction: column;
 }
 .reviewer-name {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
 }
 .reviewer-position {
-  font-size: 12px;
+  font-size: 14px;
   color: #777;
 }
-.dots-navigationr {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 20px;
+.radios-container {
+  margin-top: 15px;
 }
-.dotr {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #bbb;
+.radios-container input {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-.dotr.active {
-  background-color: #e2c065;
-  transform: scale(1.2);
-}
-.dotr:hover {
-  background-color: #f0b442;
-  transform: scale(1.2);
+  accent-color: #e2c065;
 }
 @media (max-width: 768px) {
-  .reviews-container {
-    width: 100%;
-    padding: 15px;
-  }
   .reviews-header {
+    flex-direction: column;
     text-align: center;
-  }
-  .reviews-title {
-    font-size: 22px;
-  }
-  .reviews-subtitle {
-    font-size: 14px;
-  }
-  .navigation-buttons {
-    margin-top: 10px;
-  }
-  .reviews-slider-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
   }
   .reviews-content {
     flex-direction: column;
-    align-items: center;
   }
   .review-card {
-    flex: 0 0 100%;
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-  .review-text {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  .reviewer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .reviewer-avatar {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .dots-navigationr {
-    margin-top: 15px;
+    width: 90%;
   }
 }
